@@ -1,0 +1,20 @@
+{
+  "name": "cse341-node-contacts",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jcampos-94/cse341-node-contacts#readme",
+  "bugs": {
+    "url": "https://github.com/jcampos-94/cse341-node-contacts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcampos-94/cse341-node-contacts.git"
+  },
+  "license": "ISC",
+  "author": "Juan Campos",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
