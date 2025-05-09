@@ -16,9 +16,8 @@ async function getSingle(req, res) {
     .db()
     .collection("contacts")
     .findOne({ _id: contactId });
-
-    res.setHeader("Content-Type", "application/json");
-    res.status(200).json(result);
-  };
+  res.setHeader("Content-Type", "application/json");
+  res.status(200).json(result);
+}
 
 module.exports = { getAll, getSingle };
