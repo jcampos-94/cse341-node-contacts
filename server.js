@@ -1,14 +1,13 @@
-const express = require("express");
+const express = require('express');
+const mongodb = require('./data/database');
 
-const mongodb = require("./data/database");
 const app = express();
-
 const port = process.env.PORT || 3000;
 
 // MIDDLEWARE //
 // Routes //
-app.use("/", require("./routes"));
-app.use("/contacts", require("./routes/contactsRoute"))
+app.use('/', require('./routes'));
+app.use('/contacts', require('./routes/contactsRoute'));
 
 mongodb.initDb((err) => {
   if (err) {

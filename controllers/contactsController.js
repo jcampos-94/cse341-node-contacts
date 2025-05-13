@@ -1,10 +1,10 @@
-const mongodb = require("../data/database");
-const { ObjectId } = require("mongodb");
+const mongodb = require('../data/database');
+const { ObjectId } = require('mongodb');
 
 async function getAll(req, res) {
-  const result = await mongodb.getDatabase().db().collection("contacts").find();
+  const result = await mongodb.getDatabase().db().collection('contacts').find();
   result.toArray().then((contacts) => {
-    res.setHeader("Content-Type", "application/json");
+    res.setHeader('Content-Type', 'application/json');
     res.status(200).json(contacts);
   });
 }
@@ -14,9 +14,9 @@ async function getSingle(req, res) {
   const result = await mongodb
     .getDatabase()
     .db()
-    .collection("contacts")
+    .collection('contacts')
     .findOne({ _id: contactId });
-  res.setHeader("Content-Type", "application/json");
+  res.setHeader('Content-Type', 'application/json');
   res.status(200).json(result);
 }
 
